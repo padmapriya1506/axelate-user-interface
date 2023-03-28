@@ -1,0 +1,26 @@
+<div class="container">
+<table class="styled-table" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Percentage</th>
+            <th>type</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tax of taxes"> 
+            <td>{{tax.taxId}}</td>          
+            <td>{{tax.taxName}}</td>
+            <td>{{tax.taxPercentage}}</td>
+            <td>{{tax.taxSpecificType}}</td>
+            <td><button id="{{tax.taxId}}" (click)=delete($event)> Delete</button></td>
+            <td><button id="{{tax.taxId}}" (click)=update($event)>Update</button></td>
+        </tr>
+     
+        <!-- and so on... -->
+    </tbody>
+</table>
+</div>
